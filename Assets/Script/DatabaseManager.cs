@@ -8,6 +8,6 @@ public class DatabaseManager : MonoBehaviour
 
     private void Start()
     {
-        itemList.Add(new Item(10001, "빨간 포션", "설명", Item.ItemType.Use));
+        itemList.Add(new Item(10001, "이상한 열쇠", "어떤 곳에 쓰는 열쇠지?", Item.ItemType.Use));
     }
 }

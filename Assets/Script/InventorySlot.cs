@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventorySlot : MonoBehaviour
 {
     public Image icon;
-    public TextMesh itemName_Text;
-    public TextMesh itemCount_Text;
+    public TextMeshProUGUI itemName_Text;
+    public TextMeshProUGUI itemCount_Text;
     public GameObject selected_Item;
 
-    private void Start()
-    {
-        itemName_Text = GetComponent<TextMesh>();
-    }
+    
     public void Additem(Item _item)
     {
         itemName_Text.text = _item.itemName;
