@@ -42,6 +42,10 @@ public class Inventory : MonoBehaviour
         inventoryItemList = new List<Item>();
         inventoryTabList = new List<Item>();
         slots = tf.GetComponentsInChildren<InventorySlot>();
+        inventoryItemList.Add(new Item(10001, "이상한 열쇠", "어떤 곳에 쓰는 열쇠지?", Item.ItemType.Use));
+        inventoryItemList.Add(new Item(30001, "이상한 열쇠", "어떤 곳에 쓰는 열쇠지?", Item.ItemType.ETC));
+        //inventoryItemList.Add(new Item(10001, "이상한 열쇠", "어떤 곳에 쓰는 열쇠지?", Item.ItemType.Equip));
+        //inventoryItemList.Add(new Item(10001, "이상한 열쇠", "어떤 곳에 쓰는 열쇠지?", Item.ItemType.Equip));
 
     }
     public void GetAnItem(int _itemID, int _Count = 1)
@@ -182,7 +186,7 @@ public class Inventory : MonoBehaviour
             }
             while (color.a > 0f)
             {
-                color.a += 0.03f;
+                color.a -= 0.03f;
                 slots[selectedItem].selected_Item.GetComponent<Image>().color = color;
                 yield return waitTime;
             }

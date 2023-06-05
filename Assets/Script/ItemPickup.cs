@@ -9,11 +9,11 @@ public class ItemPickup : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
+        //if (Input.GetKeyDown(KeyCode.Z))
+        // {
             //인벤토리 추가
             Inventory.instance.GetAnItem(itemID, _count);
             Destroy(this.gameObject);
-        }
+        //}
     }
 }
